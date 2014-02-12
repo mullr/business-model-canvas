@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Business Model Canvas</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-controller="RootController">
+
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered canvas-table">
+            <tbody>
+            <tr ng-repeat="row in tableLayout">
+                <td ng-repeat="cell in row"
+                    class="canvas-cell"
+                    ng-class="{'tall-cell':  cell.rowspan == 2,
+                               'short-cell': cell.rowspan == 1}"
+                    rowspan="{{cell.rowspan}}"
+                    colspan="{{cell.colspan}}">
+                    <div>
+                        <span class="canvas-cell-image glyphicon"
+                              ng-class="'glyphicon-' + cell.icon"></span>
+                        <span>{{cell.title}}</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="angular.js" type="text/javascript"></script>
+<script src="code.js" type="text/javascript"></script>
+</body>
+</html>
