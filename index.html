@@ -47,10 +47,14 @@
                                'short-cell': cell.rowspan == 1}"
                     rowspan="{{cell.rowspan}}"
                     colspan="{{cell.colspan}}">
-                    <div>
+                    <div class="table-cell">
                         <span class="canvas-cell-image glyphicon"
                               ng-class="'glyphicon-' + cell.icon"></span>
                         <span>{{cell.title}}</span>
+
+                        <ul ng-repeat="item in doc.sections[cell.key]">
+                            <li>{{item}}</li>
+                        </ul>
                     </div>
                 </td>
             </tr>
