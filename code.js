@@ -49,19 +49,19 @@ var tableLayout = [
           colspan: 2 }
     ], [
         { title: "Key Resources",
-          icon: "user",
+          icon: "tree-deciduous",
           key: "keyResources",
           rowspan: 1,
           colspan: 2 },
 
         { title: "Channels",
-          icon: "user",
+          icon: "send",
           key: "channels",
           rowspan: 1,
           colspan: 2 }
     ], [
         { title: "Cost Structure",
-          icon: "usd",
+          icon: "tags",
           key: "costStructure",
           rowspan: 1,
           colspan: 5 },
