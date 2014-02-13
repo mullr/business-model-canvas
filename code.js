@@ -10,7 +10,7 @@ var doc = {
         valuePropositions: [],
         customerRelationships: [],
         channels: [],
-        customerSegments: [],
+        customerSegments: ["one", "two", "three"],
         costStructure: [],
         revenueStreams: []
     }
