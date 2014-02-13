@@ -74,7 +74,6 @@ var tableLayout = [
     ]
 ];
 
-
 function RootController($scope) {
     $scope.doc = doc;
     $scope.tableLayout = tableLayout;
