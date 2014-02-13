@@ -10,6 +10,34 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-md-4 title">The Business Model Canvas</div>
+        <div class="col-md-3 title">
+            <div class="header-box">
+                <div class="row">Designed For:</div>
+                <div class="row">{{doc.designedFor}}</div>
+            </div>
+        </div>
+        <div class="col-md-3 title">
+            <div class="header-box">
+                <div class="row">Designed By:</div>
+                <div class="row">{{doc.designedBy}}</div>
+            </div>
+        </div>
+        <div class="col-md-1 title">
+            <div class="header-box">
+                <div class="row">Date:</div>
+                <div class="row">{{doc.date}}</div>
+            </div>
+        </div>
+        <div class="col-md-1 title">
+            <div class="header-box">
+                <div class="row">Version:</div>
+                <div class="row">{{doc.version}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <table class="table table-bordered canvas-table">
             <tbody>
             <tr ng-repeat="row in tableLayout">
