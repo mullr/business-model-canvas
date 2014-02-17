@@ -4,13 +4,13 @@ var doc = {
     date: "Today",
     version: 7,
     sections: {
-        keyPartners: ["wheeee!!!"],
+        keyPartners: [{label: "wheeee!!!"}],
         keyActivities: [],
         keyResources: [],
         valuePropositions: [],
         customerRelationships: [],
         channels: [],
-        customerSegments: ["one", "two", "three"],
+        customerSegments: [{label: "one"}, {label: "two"}, {label: "three"}],
         costStructure: [],
         revenueStreams: []
     }

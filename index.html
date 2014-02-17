@@ -61,7 +61,7 @@
                         <span>{{cell.title}}</span>
 
                         <ul ng-repeat="item in doc.sections[cell.key]">
-                            <li>{{item}}</li>
+                            <li bmc-editable-label="item.label"></li>
                         </ul>
                     </div>
                 </td>
