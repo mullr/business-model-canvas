@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="BusinessModelCanvas">
 <head>
     <title>Business Model Canvas</title>
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -14,25 +14,33 @@
         <div class="col-md-3 title">
             <div class="header-box">
                 <div class="row">Designed For:</div>
-                <div class="row">{{doc.designedFor}}</div>
+                <div class="row">
+                    <div bmc-editable-label="doc.designedFor"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-3 title">
             <div class="header-box">
                 <div class="row">Designed By:</div>
-                <div class="row">{{doc.designedBy}}</div>
+                <div class="row">
+                    <div bmc-editable-label="doc.designedBy"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-1 title">
             <div class="header-box">
                 <div class="row">Date:</div>
-                <div class="row">{{doc.date}}</div>
+                <div class="row">
+                    <div bmc-editable-label="doc.date"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-1 title">
             <div class="header-box">
                 <div class="row">Version:</div>
-                <div class="row">{{doc.version}}</div>
+                <div class="row">
+                    <div bmc-editable-label="doc.version"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -63,6 +71,7 @@
     </div>
 </div>
 <script src="angular.js" type="text/javascript"></script>
+<script src="ui-utils.js" type="text/javascript"></script>
 <script src="code.js" type="text/javascript"></script>
 </body>
 </html>

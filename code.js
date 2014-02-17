@@ -74,7 +74,43 @@ var tableLayout = [
     ]
 ];
 
-function RootController($scope) {
+var app = angular.module('BusinessModelCanvas', ['ui.keypress']);
+
+app.controller('RootController', function($scope) {
     $scope.doc = doc;
     $scope.tableLayout = tableLayout;
-}
+});
+
+app.directive('bmcFocusWhen', function($timeout, $parse) {
+    return {
+        scope: { bmcFocusWhen: "=" },
+        link: function(scope, element, attrs) {
+            scope.$watch('bmcFocusWhen', function(value) {
+                if(value) {
+                    $timeout(function() { element[0].focus(); });
+                }
+            });
+        }
+    };
+});
+
+app.directive('bmcEditableLabel', function () {
+    return {
+        restrict: 'A',
+        replace: true,
+        scope: { model: '=bmcEditableLabel' },
+        templateUrl: 'editableLabel.html',
+        link: function(scope, element, attrs) {
+            scope.editing = false;
+
+            scope.edit = function() {
+                scope.editing = true;
+            };
+
+            scope.stopEditing = function() {
+                scope.editing = false;
+            };
+        }
+    };
+});
+
