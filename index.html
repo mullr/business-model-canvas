@@ -62,7 +62,8 @@
                         <span>{{cell.title}}</span>
 
                         <ul ng-repeat="item in doc.sections[cell.key]">
-                            <li bmc-editable-label="item.label"></li>
+                            <li bmc-editable-label="item.label"
+                                just-added="item === lastAddedItem"></li>
                         </ul>
 
                         <button ng-click="addItem()">+</button>

@@ -83,7 +83,9 @@ app.controller('RootController', function($scope) {
 
 app.controller('SectionController', function($scope) {
     $scope.addItem = function() {
-        $scope.doc.sections[$scope.cell.key].push({label: "New Item"});
+        var newItem = { label: "New Item" };
+        $scope.doc.sections[$scope.cell.key].push(newItem);
+        $scope.lastAddedItem = newItem;
     };
 });
 
@@ -103,11 +105,10 @@ app.directive('bmcFocusWhen', function($timeout) {
 app.directive('bmcEditableLabel', function () {
     return {
         restrict: 'A',
-        scope: { model: '=bmcEditableLabel' },
+        scope: { model: '=bmcEditableLabel', justAdded: '='},
         templateUrl: 'editableLabel.html',
         link: function(scope, element, attrs) {
-            scope.editing = false;
-
+            scope.editing = scope.justAdded;
             scope.edit = function() {
                 scope.editing = true;
             };
