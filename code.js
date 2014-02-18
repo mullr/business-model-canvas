@@ -81,7 +81,13 @@ app.controller('RootController', function($scope) {
     $scope.tableLayout = tableLayout;
 });
 
-app.directive('bmcFocusWhen', function($timeout, $parse) {
+app.controller('SectionController', function($scope) {
+    $scope.addItem = function() {
+        $scope.doc.sections[$scope.cell.key].push({label: "New Item"});
+    };
+});
+
+app.directive('bmcFocusWhen', function($timeout) {
     return {
         scope: { bmcFocusWhen: "=" },
         link: function(scope, element, attrs) {

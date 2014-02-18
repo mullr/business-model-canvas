@@ -50,6 +50,7 @@
             <tbody>
             <tr ng-repeat="row in tableLayout">
                 <td ng-repeat="cell in row"
+                    ng-controller="SectionController"
                     class="canvas-cell"
                     ng-class="{'tall-cell':  cell.rowspan == 2,
                                'short-cell': cell.rowspan == 1}"
@@ -63,6 +64,8 @@
                         <ul ng-repeat="item in doc.sections[cell.key]">
                             <li bmc-editable-label="item.label"></li>
                         </ul>
+
+                        <button ng-click="addItem()">+</button>
                     </div>
                 </td>
             </tr>
