@@ -104,8 +104,9 @@ app.directive('bmcFocusWhen', function($timeout) {
 
 app.directive('bmcEditableLabel', function () {
     return {
-        restrict: 'A',
-        scope: { model: '=bmcEditableLabel', justAdded: '='},
+        restrict: 'E',
+        replace: true,
+        scope: { model: '=', justAdded: '='},
         templateUrl: 'editableLabel.html',
         link: function(scope, element, attrs) {
             scope.editing = scope.justAdded;

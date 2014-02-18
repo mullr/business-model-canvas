@@ -15,7 +15,7 @@
             <div class="header-box">
                 <div class="row">Designed For:</div>
                 <div class="row">
-                    <div bmc-editable-label="doc.designedFor"></div>
+                    <bmc-editable-label model="doc.designedFor"></bmc-editable-label>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="header-box">
                 <div class="row">Designed By:</div>
                 <div class="row">
-                    <div bmc-editable-label="doc.designedBy"></div>
+                    <bmc-editable-label model="doc.designedBy"></bmc-editable-label>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="header-box">
                 <div class="row">Date:</div>
                 <div class="row">
-                    <div bmc-editable-label="doc.date"></div>
+                    <bmc-editable-label model="doc.date"></bmc-editable-label>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="header-box">
                 <div class="row">Version:</div>
                 <div class="row">
-                    <div bmc-editable-label="doc.version"></div>
+                    <bmc-editable-label model="doc.version"></bmc-editable-label>
                 </div>
             </div>
         </div>
@@ -62,8 +62,11 @@
                         <span>{{cell.title}}</span>
 
                         <ul ng-repeat="item in doc.sections[cell.key]">
-                            <li bmc-editable-label="item.label"
-                                just-added="item === lastAddedItem"></li>
+                            <li>
+                                <bmc-editable-label model="item.label"
+                                                just-added="item === lastAddedItem">
+                                </bmc-editable-label>
+                            </li>
                         </ul>
 
                         <button ng-click="addItem()">+</button>
