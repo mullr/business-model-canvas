@@ -2,6 +2,7 @@
     <input ng-model="model"
            ng-show="editing"
            bmc-focus-when="editing"
+           bmc-select-all="justAdded"
            ng-blur="stopEditing()"
            ui-keypress="{'enter esc': 'stopEditing()'}">
     <span ng-hide="editing" ng-dblclick="edit()">

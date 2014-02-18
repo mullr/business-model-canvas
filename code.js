@@ -120,3 +120,14 @@ app.directive('bmcEditableLabel', function () {
     };
 });
 
+app.directive('bmcSelectAll', function($parse, $timeout) {
+   return {
+       restrict: 'A',
+       link: function(scope, element, attrs) {
+           if($parse(attrs.bmcSelectAll)(scope)) {
+               $timeout(function() { element[0].select(); });
+           }
+       }
+   };
+});
+
