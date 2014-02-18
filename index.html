@@ -61,10 +61,10 @@
                               ng-class="'glyphicon-' + cell.icon"></span>
                         <span>{{cell.title}}</span>
 
-                        <ul ng-repeat="item in doc.sections[cell.key]">
-                            <li>
+                        <ul>
+                            <li ng-repeat="item in doc.sections[cell.key]">
                                 <bmc-editable-label model="item.label"
-                                                just-added="item === lastAddedItem">
+                                                    just-added="item === lastAddedItem">
                                 </bmc-editable-label>
                             </li>
                         </ul>
